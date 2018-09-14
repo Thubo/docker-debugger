@@ -14,3 +14,9 @@ RUN apt-get update && apt-get install -y \
     vim \
     wget \
   && rm -rf /var/lib/apt/*
+
+RUN git clone https://github.com/Thubo/helper-functions /root/.helper/functions
+RUN git clone https://github.com/Thubo/helper-aliases.git /root/.helper/aliases
+
+ADD ./home/bashrc /root/.bashrc
+ADD ./home/bash_profile /root/.bash_profile
