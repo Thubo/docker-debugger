@@ -1,0 +1,18 @@
+services:
+  alpine:
+    build:
+      context: ./alpine
+      dockerfile: Dockerfile
+    image: thubo/debugger:alpine
+
+  ubuntu:
+    build:
+      context: ./ubuntu
+      dockerfile: Dockerfile
+    image: thubo/debugger:ubuntu
+
+  latest:
+    build:
+      context: ./ubuntu
+      dockerfile: Dockerfile
+    image: thubo/debugger:latest
